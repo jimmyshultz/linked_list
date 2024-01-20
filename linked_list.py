@@ -1,3 +1,12 @@
+"""
+This file provides functionality for the linked list data structure.
+It contains:
+- A node class
+- A linked list class
+- A main function
+- A call to the main function to demonstrate functionality
+"""
+
 class Node:
     """
     This class defines a node of a linked list.
@@ -67,13 +76,11 @@ class LinkedList:
         
     def insertBeginning(self, d):
         """
-        This methods adds a node to the beginning of the linked list.
-        If the list is empty it sets the header to a Node instantiated with the argument given in this method
-        as its value. It also sets the lists current node to the header it just assigned the new node to.  
-        If the list is not empty, it uses a temporary variable to hold the new node instantiated as above. 
-        While the temporary variable holds the new node it sets the new node's next value to point to 
-        the list's current header node.  It then sets the list's header node to the new node using the 
-        temporary variable.  
+        This method initializes and adds a new node at the beginning of the linked list 
+        using the argument give in this method as the node's data.
+        - If the list is empty, the new node is assigned to the linked list's header which is then assigned to the current.
+        - If the list is not empty, the new node has its next node set to the header node
+        and then is itself assigned to be the header node.
         """
 
         if (self.Header is None):
@@ -86,13 +93,11 @@ class LinkedList:
 
     def insertCurrentNext(self, d):
         """
-        This method adds a new node directly following the current node.
-        If the list is empty it sets the header to a Node instantiated with the argument given in this method
-        as its value. It also sets the lists current node to the header it just assigned the new node to.
-        If the list is not empty, it instantiates a new node using the data point give as an argument in this method
-        as its value and assigns it to a temporary new node variable.  It then assigns this new node's next instance
-        variable to the linked list's current node's next instance variable.  Then it sets the current node's next
-        instance variable to the new node. 
+        This method initializes and adds a new node directly following the current node 
+        using the argument give in this method as the node's data.
+        - If the list is empty, the new node is assigned to the linked list's header which is then assigned to the current.
+        - If the list is not empty, the new node has its next node set to the current node's next node 
+        and then is itself assigned to the current node's next node.
         """
 
         if (self.Header is None):
@@ -179,5 +184,3 @@ def main():
     a_list.printList()
 
 main()
-print(LinkedList.__doc__)
-print(Node.__doc__)
