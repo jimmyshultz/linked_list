@@ -24,9 +24,9 @@ class LinkedList:
     It's two instance variables are:
     - A header node
     - A current node
-    Each of these variables are designed to hold a node, 
-    however the nodes that they hold can be changed as one manipulates the linked list 
-    using this class's methods.
+    Each of these variables are designed to hold a node, however the nodes that
+     they hold can be changed as one manipulates the
+     linked list using this class's methods.
     """
     
     def __init__(self, d=None):
@@ -76,10 +76,12 @@ class LinkedList:
         
     def insertBeginning(self, d):
         """
-        This method initializes and adds a new node at the beginning of the linked list 
-        using the argument give in this method as the node's data.
-        - If the list is empty, the new node is assigned to the linked list's header which is then assigned to the current.
-        - If the list is not empty, the new node has its next node set to the header node
+        This method initializes and adds a new node at the beginning of the 
+        linked list using the argument give in this method as the node's data.
+        - If the list is empty, the new node is assigned to the linked list's 
+        header which is then assigned to the current.
+        - If the list is not empty, the new node has its next node 
+        set to the header node
         and then is itself assigned to be the header node.
         """
 
@@ -93,11 +95,13 @@ class LinkedList:
 
     def insertCurrentNext(self, d):
         """
-        This method initializes and adds a new node directly following the current node 
-        using the argument give in this method as the node's data.
-        - If the list is empty, the new node is assigned to the linked list's header which is then assigned to the current.
-        - If the list is not empty, the new node has its next node set to the current node's next node 
-        and then is itself assigned to the current node's next node.
+        This method initializes and adds a new node directly following the 
+        current node using the argument give in this method as the node's data.
+        - If the list is empty, the new node is assigned to the linked list's 
+        header which is then assigned to the current.
+        - If the list is not empty, the new node has its next node set to the 
+        current node's next node and then is itself assigned to the 
+        current node's next node.
         """
 
         if (self.Header is None):
@@ -112,8 +116,10 @@ class LinkedList:
         """
         This method returns:
         - None, if the list is empty
-        - the data value of the linked list's header node, removes the header node from the linked list,
-        and resets the current node to be the new header node, if the list is not empty.
+        - the data value of the linked list's header node, 
+        removes the header node from the linked list,
+        and resets the current node to be the new header node, 
+        if the list is not empty.
         """
 
         if (self.Header is None):
@@ -128,7 +134,8 @@ class LinkedList:
         """
         This method returns:
         - None, if the list is empty.
-        - the data value of the next node following linked list's current node while removing the node itself.
+        - the data value of the next node following linked list's 
+        current node while removing the node itself.
         """
 
         if (self.Header is None):
@@ -140,9 +147,11 @@ class LinkedList:
         
     def printList(self):
         """
-        This method uses a while loop to cycle through the linked list and print its contents to the console.
-        If the linked list is empty the user will be notified.  If the linked list is not empty the user
-        will see the contents of the linked list as well as the current node.
+        This method uses a while loop to cycle through the linked 
+        list and print its contents to the console.
+        If the linked list is empty the user will be notified.  
+        If the linked list is not empty the user will see the contents of the 
+        linked list as well as the current node.
         """
 
         node_to_print = self.Header
